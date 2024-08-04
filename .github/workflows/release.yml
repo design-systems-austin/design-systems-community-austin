@@ -21,10 +21,10 @@ jobs:
           node-version: 18
 
       - name: Install Dependencies
-        run: yarn
+        run: npm install
 
       - name: Build
-        run: yarn build
+        run: npm run build
         env:
           NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
           NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
@@ -39,7 +39,7 @@ jobs:
           # this is the command you'd run, but we're not publishing...
           # publish: yarn release
           # so we run a no-op
-          publish: yarn release-fake
+          publish: npm run release-fake
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
