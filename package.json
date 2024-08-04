@@ -7,10 +7,16 @@
   "scripts": {
     "dev": "vite",
     "build": "rm -rf dist && tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo 'No-op for tests since we dont have any'",
+    "lint": "echo 'No-op for linting since we dont have any'",
+    "release": "turbo run build lint test && changeset version && changeset publish",
+    "release-fake": "turbo run build lint test && echo 'No-op for changesets since we dont publish to npm'"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2"
   }
 }

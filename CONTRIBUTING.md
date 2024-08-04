@@ -54,7 +54,7 @@ Good pull requests—patches, improvements, new features—are a fantastic help.
 
 **Please ask first** before embarking on any significant pull request (e.g. implementing features, refactoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
 
-### Updating Primer CSS
+### Updating
 
 Anyone can open a pull request.
 
@@ -77,16 +77,8 @@ Here are a few things you can do that will increase the likelihood of your pull 
 - Keep your change as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
 - Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
-## Releasing a new Primer CSS version
+## Releasing a new version
 
 See [RELEASING.md](RELEASING.md) for our release process.
 
 ## Resources
-
-- [Contributing to Open Source on GitHub](https://guides.github.com/activities/contributing-to-open-source/)
-- [Using Pull Requests](https://help.github.com/articles/using-pull-requests/)
-- [GitHub Help](https://help.github.com)
-
-[fork]: https://github.com/primer/css/fork
-[pr]: https://github.com/primer/css/compare
-[style]: https://primer.style/css/principles
