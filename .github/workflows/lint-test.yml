@@ -5,24 +5,12 @@ jobs:
   ci:
     name: CI
     runs-on: ubuntu-latest
-    # To use Remote Caching, uncomment the next lines and follow the steps below.
-    env:
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Cache turbo build setup
-        uses: actions/cache@v4
-        with:
-          path: .turbo
-          key: ${{ runner.os }}-turbo-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-turbo-
 
       - name: Set up Node.js
         uses: actions/setup-node@v4

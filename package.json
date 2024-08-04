@@ -10,8 +10,8 @@
     "preview": "vite preview",
     "test": "echo 'No-op for tests since we dont have any'",
     "lint": "echo 'No-op for linting since we dont have any'",
-    "release": "turbo run build lint test && changeset version && changeset publish",
-    "release-fake": "turbo run build lint test && echo 'No-op for changesets since we dont publish to npm'"
+    "release": "npm run build lint test && changeset version && changeset publish",
+    "release-fake": "npm run build lint test && echo 'No-op for changesets since we dont publish to npm'"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
