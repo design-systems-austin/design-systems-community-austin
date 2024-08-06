@@ -23,8 +23,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.email "designsystems.austin@gmail.com"
-          git config --global user.name "Design Systems Austin"
+          git config --global user.email "mattoliver.mattoliver@gmail.com"
+          git config --global user.name "TheeMattOliver"
 
       - name: Build and Deploy
         run: npm run build && npm run deploy
