@@ -8,15 +8,18 @@
     "dev": "vite",
     "build": "rm -rf dist && tsc && vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo 'No-op for tests since we dont have any'",
     "lint": "echo 'No-op for linting since we dont have any'",
     "release": "npm run build && changeset version && changeset publish",
     "release-fake": "npm run build && echo 'No-op for changesets since we dont publish to npm'"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^5.1.4",
     "@changesets/changelog-github": "^0.4.8",
-    "@changesets/cli": "^2.26.2"
+    "@changesets/cli": "^2.26.2",
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
   }
 }
