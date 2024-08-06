@@ -26,6 +26,8 @@ jobs:
           git config --global user.email "mattoliver.mattoliver@gmail.com"
           git config --global user.name "TheeMattOliver"
 
+      - name: Build the project
+        run: npm run build
       # - name: Build and Deploy
       #   run: npm run build && npm run deploy
       #   env:
