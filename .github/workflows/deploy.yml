@@ -26,11 +26,18 @@ jobs:
           git config --global user.email "mattoliver.mattoliver@gmail.com"
           git config --global user.name "TheeMattOliver"
 
-      - name: Build and Deploy
-        run: npm run build && npm run deploy
+      # - name: Build and Deploy
+      #   run: npm run build && npm run deploy
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Deploy to GitHub Pages
       #   uses: peaceiris/actions-gh-pages@v3
       #   with:
       #     github_token: ${{ secrets.GITHUB_TOKEN }}
       #     publish_dir: ./dist
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx gh-pages -d dist -r https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
