@@ -65,7 +65,9 @@ header .nav .nav-links li a:hover {
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  background: #007bff;
+  /* background: #007bff; */
+  background: deeppink;
+
   color: #fff;
   border-radius: 16px;
   height: 100%;
